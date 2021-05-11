@@ -5,56 +5,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>自己PRサイト</title>
-<style type="text/css">
-.title{
-    background-color: #00bfff;
-    height: 40px;
-    width: auto;
-    line-height: 40px;
-    font-size: 20px;
-    color: ivory;
-    display: flex;
-    justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-p {
-    font-size: 15px;
-    color: black;
-    text-align: right;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-</style>
+    <link rel="stylesheet" type="text/css" href="css/PR.css">
+    <style type="text/css">
+    </style>
 </head>
 <body>
+    <!-- タイトル -->
     <h1 class="title">self-introduction</h1>
-     <p>井戸向拓海</p> 
-        <p>フォース株式会社</p>
-        <p>生年月日：7月14日</p>
-        <p>出身地：埼玉県</p>
-        <p>趣味：お菓子作り</p>
-    
-    <img id="mypic" src="img/1351935.jpg" width="400" height="300">
-    <div id="mypic"></div>
-        <script>
-        var pics_src = new Array("img/1351935.jpg","img/img_tree.jfif","img/1351935.jpg");
-        var num = -1;
 
-        slideshow_timer();
 
-        function slideshow_timer(){
-            if (num == 2){
-                num = 0;
-            } else {
-                num ++;
-            }
-            document.getElementById("mypic").src=pics_src[num];
-                setTimeout("slideshow_timer()",1000); 
-            }
-            </script>
-<script>
-    'use strict';
-    
-</script>
+    <!-- メニューバー -->
+    <nav>
+        <ul id="menubar">
+            <li><a href="#homeP" class="scrollable">HOME</a></li>
+            <li><a href="#page1" class="scrollable">自己紹介</a></li>
+            <li><a href="#page2" class="scrollable">自己PR</a></li>
+            <li><a href="#page3" class="scrollable">学生時代</a></li>
+            <li><a href="#page4" class="scrollable">趣味</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ホーム画面 -->
+    <div id="homeP" class="pagebox">
+        <img id="mypic" src="img/cherry-blossom.jpg">
+        <div id="mypic"></div>
+        <script type="text/javascript" src="js/PR.js"></script>
+    </div>
+
+
+    <!-- 自己紹介ページ -->
+    <div id="page1" class="pagebox">
+        <div class="heading">
+            <h1></h1>
+            <h2>自己紹介</h2>
+        </div>
+        <div class="content1">
+            <p class="sentence1">
+                <img class="face_photo" src="img/top.JPG">
+                <br>
+                <br>
+                名前：井戸向拓海<br>
+                所属：フォース株式会社<br>
+                学歴：東京工科大学応用生物学部応用生物学科　卒業<br>
+                出身地：埼玉県<br>
+                趣味：お菓子作り<br>
+                好きなスポーツ：野球<br>
+                応援している球団：埼玉西武ライオンズ<br>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- 自己PRページ -->
+    <div id="page2" class="pagebox">
+        <div class="heading">
+            <h1></h1>
+            <h2>自己PR</h2>
+        </div>
+        <div class="content2">
+            <p class="sentence2">
+                入社前には学校等の授業でプログラミングの経験やLINUXコマンドを使用して研究を行った経験がある。
+                <br>
+                入社後には研修を通して、WEB作成に必要なHTML、CSS、JavaScriptやデータを扱うのためのツールであるデータベースを学習した。
+                <br>
+                調べながらではあるが、少しずつスキルを磨いている途中である。
+            </p>
+            <div class="table0">
+                <div>
+                    <table border="1" class="table1">
+                    <caption>入社前に学んだスキル</caption>
+                        <tr>
+                            <th rowspan="2">開発言語</th><td>C</td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">OS/開発環境</th><td>Windows</td>
+                        </tr>
+                        <tr>
+                            <td>UNIX(Ubuntu)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table border="1" class="table2" >
+                        <caption>研修で新たに学んだスキル</caption>
+                        <tr>
+                            <th rowspan="3">開発言語</th><td>HTML</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                        </tr>
+                        <tr>
+                            <th>データベース</th><td>SQL(MySQL)</td>
+                        </tr>
+                        <tr>
+                            <th>管理システム</th><td>Git</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 学生時代ページ -->
+    <div id="page3" class="pagebox">
+        <div class="heading">
+            <h1></h1>
+            <h2>学生時代</h2>
+        </div>
+        <div class="content3">
+            <p class="sentence3">
+                <table border="1" class="table3">
+                    <tr><th>卒業大学</th><td>東京工科大学・応用生物学部・応用生物学科</td></tr>
+                    <tr><th>得意科目</th><td>遺伝子工学、分子生物学</td></tr>
+                    <tr><th>苦手科目</th><td>英語</td></tr>
+                    <tr><th>専攻分野</th><td>バイオインフォマティクス</td></tr>
+                    <tr><th>特に頑張ったこと</th><td>学生実験</td></tr>
+                </table>
+            </p>
+
+            <table class="experiment" >
+                <tr>
+                    <td>
+                        <img src="img/methyl_orange.jpg" alt="メチルオレンジによるpH 溶液の色の変化" width="280" height="200" id="experiment_1img" onclick="func1()"><br>
+                        メチルオレンジによるpH 溶液の色の変化
+                    </td>
+                    <td>
+                        <img src="img/mitochondria.jpg" alt="ミトコンドリアの観察結果"  width="280" height="200" id="experiment_2img" onclick="func2()"><br>
+                        ミトコンドリアの観察結果
+                    </td>
+                    <td>
+                        <img src="img/SDS-PAGE.png" alt="SDS-PAGE結果"  width="280" height="200" id="experiment_3img" onclick="func3()"><br>
+                        SDS-PAGE結果
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="img/agarose.jpg" alt="アガロースゲル電気泳動結果"  width="280" height="200" id="experiment_4img" onmouseover="func4()"><br>
+                        アガロースゲル電気泳動結果
+                    </td>
+                    <td>
+                        <img src="img/e_coli.jpg" alt="大腸菌グラム染色結果"  width="280" height="200" id="experiment_5img" onmouseover="func5()"><br>
+                        大腸菌グラム染色結果
+                    </td>
+                    <td>
+                        <img src="img/natto_fungus.jpg" alt="納豆金グラム染色結果"  width="280" height="200" id="experiment_6img" onmouseover="func6()"><br>
+                        納豆金グラム染色結果
+                    </td>
+                </tr>
+            </table>
+
+            <script type="text/javascript" src="js/PR2.js"></script>
+
+        </div>
+    </div>
+
+
+    <!-- 趣味ページ -->
+    <div id="page4" class="pagebox">
+        <div class="heading">
+            <h1></h1>
+            <h2>趣味</h2>
+        </div>
+        <div class="content4">
+            <p class="sentence4">
+                趣味：お菓子作り<br>
+                得意なお菓子：ティラミス<br>
+                <br>
+                高校生の頃から家事の手伝いをきっかけに料理を始めました。そこで、料理番組やレシピを見る機会が増え、お菓子作りにも興味を持ちました。主に家族の誕生日やお祝い事のときに作っています。お菓子作りの魅力は、調理から出来上がりまでの楽しみや出来上がった後のうれしさを体感できることです。材料の調達から後片付けまで手間はかかりますが、食べた人に「美味しい」と言ってもらえると、とてもうれしく、やりがいを感じます。
+            </p>
+            <br>
+            <p id="sweet_img"><img alt src="img/tiramisu.jpg" width="600" height="300" data-original="img/tiramisu.jpg" data-lazy="true"></p>
+
+            <script type="text/javascript" src="js/PR3.js"></script>
+
+        </div>
+    </div>
+
 </body>
 </html>
